@@ -1,14 +1,6 @@
 import java.util.*;
 import java.io.*;
 
-/*
-    OBSERVAÇÕES
-        coringa (.): aceita QUALQUER coisa.
-        conjunto ([ ]): deve conter apenas letras e números, e deve ser conjunto não-vazio.
-        intervalo ([ - ]): deve conter apenas letras e números.
-        complemento ([^...]): caracteres (letras e números em alfabeto[]) que não estão no conjunto.
-*/
-
 public class RegExp {
 
     static ArrayList<Boolean> eh_caracter;
@@ -194,7 +186,7 @@ public class RegExp {
                     }
                 }
                 else if (exp_reg.charAt(i) == '.')
-                    letras[i] = Character.toString((char) 7).charAt(0); // VAI DAR PAU AQUI
+                    letras[i] = Character.toString((char) 7).charAt(0);
                 if (i + 1 < exp_reg.length() && exp_reg.charAt(i + 1) == '*') {
                     G.incluiArco(ant, i + 1);
                     G.incluiArco(i + 1, ant);
